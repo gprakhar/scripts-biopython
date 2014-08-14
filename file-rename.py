@@ -1,6 +1,5 @@
 cript to rename file according to particular pattern
 ##Author : Prakhar Gaur
-##Licence GNU GPL3
 ##Date Thu Aug 14 13:21:21 UTC 2014
 # 26_S27_L001_R2_001.fastq
 
