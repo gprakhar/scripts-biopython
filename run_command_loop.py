@@ -10,7 +10,7 @@ for i in range(1,40):
         os.system(cmdstr)
         os.system(cmdPANDA)
     else:
-      print NA
+      print 'NA'
 
 
 
