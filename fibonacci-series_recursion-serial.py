@@ -13,5 +13,17 @@ args = parser.parse_args()
 
 num = args.numberOfTimes
 ComputationType = args.typeOfComputation
+first = 0
+second = 1
+temp = 0
 
-if ComputationType
+if ComputationType == 'P':
+	for i in range(0,num):
+		if i <= 1:
+			temp = i
+		else:
+			temp = first + second
+			first = second
+			second = temp
+		print temp
+
