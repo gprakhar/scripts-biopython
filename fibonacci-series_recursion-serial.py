@@ -7,9 +7,11 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("numberOfTimes", help="Number of terms to compute the Fibonacci series to", type=int)
-parser.add_argument("-t", "--typeOfComputation", help="Mention type of computation, 'R' for recursive \n 'P' for procedural, Default 'P'. ")
-parser.parse_args()
+parser.add_argument('numberOfTimes', metavar='N', help='Number of terms to compute the Fibonacci series to', type=int)
+parser.add_argument('-t', '--typeOfComputation', default='P', help='Mention type of computation, "R" for recursive and "P" for procedural, Default "P".')
+args = parser.parse_args()
 
-print args.numberOfTimes
-print args.typeOfComputatio
+num = args.numberOfTimes
+ComputationType = args.typeOfComputation
+
+if ComputationType
