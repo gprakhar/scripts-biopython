@@ -16,6 +16,15 @@ ComputationType = args.typeOfComputation
 first = 0
 second = 1
 temp = 0
+recurJ = 0
+
+def fibo(iterator):
+        if iterator == 0:
+                return 0
+        elif iterator == 1:
+                return 1
+        else:
+                return( fibo(iterator-1) + fibo(iterator-2) )
 
 if ComputationType == 'P':
 	for i in range(0,num):
@@ -26,4 +35,8 @@ if ComputationType == 'P':
 			first = second
 			second = temp
 		print temp
+else:
+	for i in range(1,num):
+		print fibo(recurJ)
+		recurJ +=1
 
