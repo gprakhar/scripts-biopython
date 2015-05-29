@@ -7,7 +7,7 @@ from random import randint
 
 parser = argparse.ArgumentParser()
 parser.add_argument('lenghtofSeq', metavar='N', help='lenght of the nucleotide sequence', type=int)
-parser.add_argument('-v', '--numberofVariants', default='6', help='Input number of variant sequences with tandem duplications, to produce for Multiple sequence alignment. Half will have tandem  and other half non tandem Default "6".')
+parser.add_argument('-v', '--numberofVariants', default='6', help='Input number of variant sequences with tandem duplications, to produce for Multiple sequence alignment. Half will have tandem  and other half non tandem Default "6".', type=int)
 args = parser.parse_args()
 
 lenght = args.lenghtofSeq
