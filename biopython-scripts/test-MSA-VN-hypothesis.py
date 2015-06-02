@@ -4,6 +4,7 @@
 
 import argparse
 from random import randint
+import shutil
 
 parser = argparse.ArgumentParser()
 parser.add_argument('lenghtofSeq', metavar='N', help='lenght of the nucleotide sequence', type=int)
@@ -25,5 +26,14 @@ for i in range(0,lenght):
 	elif numRand == 4:
                 nuclSeq.append('C')
 
-print ''.join(nuclSeq)
+with open("original.fa",'w') as fileHandle1:
+	fileHandle1.write("".join(nuclSeq))
+
+
+for itrate in range(numVar):
+	locDup = randint(1,lenght)
+	sizeDup = ((3*itrate)/100)*lenght
+	if((lenght-locDup) > sizeDup):
+		
+	
 

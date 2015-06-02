@@ -1,4 +1,5 @@
 ##User generated gitignore file
 
 biopython-scripts/venvBioPy/*
+*.fa
 
