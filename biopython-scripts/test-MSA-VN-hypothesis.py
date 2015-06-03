@@ -26,14 +26,33 @@ for i in range(0,lenght):
 	elif numRand == 4:
                 nuclSeq.append('C')
 
-with open("original.fa",'w') as fileHandle1:
+with open('output_%dvariants.fa' % numVar,'w') as fileHandle1:
+	fileHandle1.write(">ori-seq\n")
 	fileHandle1.write("".join(nuclSeq))
+	fileHandle1.write("\n")
+	fileHandle1.close()
+	print ("".join(nuclSeq))
 
-
+temp = list()
 for itrate in range(numVar):
 	locDup = randint(1,lenght)
 	sizeDup = ((3*itrate)/100)*lenght
-	if((lenght-locDup) > sizeDup):
-		
+	if locDup < (lenght-locDup):
+		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup+1:locDup+1+sizeDup]))
+	else:
+		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup-sizeDup:locDup]))
+	print ("".join(temp))
+	del temp[:]
+'''	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
+		fileHandle2.write('>var-seq%d\n' % itrate)
+		fileHandle2.write("".join(temp))
+		fileHandle1.write("\n")
+		fileHandle2.close()
+	del temp[:]
+'''
+
+
+
+			
 	
 
