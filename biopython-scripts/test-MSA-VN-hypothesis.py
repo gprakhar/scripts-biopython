@@ -1,18 +1,17 @@
 #Script to test out a hypothesis proposed by VN
 #author: prakhar gaur
-#date: Fri Oct 10 10:36:35 IST 2014
+#date: Sat May 30 IST 2015
 
 import argparse
 from random import randint
-import shutil
 
 parser = argparse.ArgumentParser()
-parser.add_argument('lenghtofSeq', metavar='N', help='lenght of the nucleotide sequence', type=int)
+parser.add_argument('lenghtofAminoAcidSeq', metavar='N', help='lenght of the amino acid sequence', type=int, default='34')
 parser.add_argument('-v', '--numberofVariants', default='6', help='Input number of variant sequences with tandem duplications, to produce for Multiple sequence alignment. Half will have tandem  and other half non tandem Default "6".', type=int)
 args = parser.parse_args()
 
-lenght = args.lenghtofSeq
-numVar = args.numberofVariants #default would be assumed to be 6
+lenght = args.lenghtofAminoAcidSeq*3
+numVar = args.numberofVariants #default is assumed to be 6
 nuclSeq = list()
 
 for i in range(0,lenght):
@@ -26,7 +25,7 @@ for i in range(0,lenght):
 	elif numRand == 4:
                 nuclSeq.append('C')
 
-with open('output_%dvariants.fa' % numVar,'w') as fileHandle1:
+with open('output_%dvariants.fa' % numVar, 'w') as fileHandle1:
 	fileHandle1.write(">ori-seq\n")
 	fileHandle1.write("".join(nuclSeq))
 	fileHandle1.write("\n")
@@ -34,22 +33,24 @@ with open('output_%dvariants.fa' % numVar,'w') as fileHandle1:
 	
 print ("".join(nuclSeq))
 
-temp = list()
+varSeq = list()
 nuclSeq_Slice = list()
-for itrate in range(1,numVar):
+for itrate in range(1,numVar+1):
 	locDup = randint(1,lenght)
 	print "temp%d location of dplication: %d" % (itrate, locDup)
-	sizeDup = ((3*itrate)/100.0)*lenght
+	sizeDup = ((3*itrate)/100.0)*lenght # BUG what will happen when itrate value goes above 100 # SOLUTION conditional to not let percentage go beyond 49%
 	print "temp%d size of duplication : %f" % (itrate, sizeDup)
 	print "temp%d size of duplication in int: %f" % (itrate, int(sizeDup))
 	if locDup < (lenght-locDup):
 		pass
-	#	NuclSeq_Slice = nuclSeq[locDup+1:locDup+1+sizeDup]
+		NuclSeq_Slice = nuclSeq[locDup+1:int(locDup+1+sizeDup)]
+		varSeq.append(nuclSeq[:locDup+1])
+		print ("".join(varSeq))
 	#	temp.append(nuclSeq.insert(locDup, nuclSeq[locDup+1:locDup+1+sizeDup]))
 	else:
 		pass
 #		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup-sizeDup:locDup]))
-	print "temp %d: %s" % (itrate, temp)
+	print "temp %d: %s" % (itrate, varSeq)
 	print "Original %d: %d" % (itrate, len(nuclSeq))
 	del temp[:]
 '''	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
