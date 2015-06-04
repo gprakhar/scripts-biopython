@@ -31,17 +31,26 @@ with open('output_%dvariants.fa' % numVar,'w') as fileHandle1:
 	fileHandle1.write("".join(nuclSeq))
 	fileHandle1.write("\n")
 	fileHandle1.close()
-	print ("".join(nuclSeq))
+	
+print ("".join(nuclSeq))
 
 temp = list()
-for itrate in range(numVar):
+nuclSeq_Slice = list()
+for itrate in range(1,numVar):
 	locDup = randint(1,lenght)
-	sizeDup = ((3*itrate)/100)*lenght
+	print "temp%d location of dplication: %d" % (itrate, locDup)
+	sizeDup = ((3*itrate)/100.0)*lenght
+	print "temp%d size of duplication : %f" % (itrate, sizeDup)
+	print "temp%d size of duplication in int: %f" % (itrate, int(sizeDup))
 	if locDup < (lenght-locDup):
-		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup+1:locDup+1+sizeDup]))
+		pass
+	#	NuclSeq_Slice = nuclSeq[locDup+1:locDup+1+sizeDup]
+	#	temp.append(nuclSeq.insert(locDup, nuclSeq[locDup+1:locDup+1+sizeDup]))
 	else:
-		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup-sizeDup:locDup]))
-	print ("".join(temp))
+		pass
+#		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup-sizeDup:locDup]))
+	print "temp %d: %s" % (itrate, temp)
+	print "Original %d: %d" % (itrate, len(nuclSeq))
 	del temp[:]
 '''	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
 		fileHandle2.write('>var-seq%d\n' % itrate)
