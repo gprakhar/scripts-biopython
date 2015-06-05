@@ -45,14 +45,14 @@ for itrate in range(1,numVar+1):
 		pass
 		NuclSeq_Slice = nuclSeq[locDup+1:int(locDup+1+sizeDup)]
 		varSeq.append(nuclSeq[:locDup+1])
-		print ("".join(varSeq))
+		print "NuclSeq_Slice len = %d :%s" % (len(NuclSeq_Slice), NuclSeq_Slice)
+#		print ("".join(varSeq))
 	#	temp.append(nuclSeq.insert(locDup, nuclSeq[locDup+1:locDup+1+sizeDup]))
 	else:
 		pass
 #		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup-sizeDup:locDup]))
-	print "temp %d: %s" % (itrate, varSeq)
-	print "Original %d: %d" % (itrate, len(nuclSeq))
-	del temp[:]
+	print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
+	del varSeq[:]
 '''	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
 		fileHandle2.write('>var-seq%d\n' % itrate)
 		fileHandle2.write("".join(temp))
