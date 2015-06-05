@@ -36,22 +36,23 @@ print ("".join(nuclSeq))
 varSeq = list()
 nuclSeq_Slice = list()
 for itrate in range(1,numVar+1):
-	locDup = randint(1,lenght)
+	locDup = randint(0,lenght)
 	print "temp%d location of dplication: %d" % (itrate, locDup)
 	sizeDup = ((3*itrate)/100.0)*lenght # BUG what will happen when itrate value goes above 100 # SOLUTION conditional to not let percentage go beyond 49%
-	print "temp%d size of duplication : %f" % (itrate, sizeDup)
 	print "temp%d size of duplication in int: %f" % (itrate, int(sizeDup))
 	if locDup < (lenght-locDup):
-		pass
-		NuclSeq_Slice = nuclSeq[locDup+1:int(locDup+1+sizeDup)]
-		varSeq.append(nuclSeq[:locDup+1])
+		NuclSeq_Slice = nuclSeq[locDup:int(locDup+sizeDup)]
 		print "NuclSeq_Slice len = %d :%s" % (len(NuclSeq_Slice), NuclSeq_Slice)
-#		print ("".join(varSeq))
-	#	temp.append(nuclSeq.insert(locDup, nuclSeq[locDup+1:locDup+1+sizeDup]))
+		print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
+		varSeq = nuclSeq[:locDup]
+		print "temp%d: R1 len=%d :%s" % (itrate, len(varSeq), varSeq)
+		varSeq.extend(NuclSeq_Slice)
+		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
+		varSeq.extend(nuclSeq[locDup:])
 	else:
 		pass
 #		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup-sizeDup:locDup]))
-	print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
+	print "temp%d: R-fi len=%d :%s" % (itrate, len(varSeq), varSeq)
 	del varSeq[:]
 '''	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
 		fileHandle2.write('>var-seq%d\n' % itrate)
