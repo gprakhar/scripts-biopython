@@ -4,6 +4,7 @@
 
 import argparse
 from random import randint
+from Bio.Align.Applications import MuscleCommandline
 
 parser = argparse.ArgumentParser()
 parser.add_argument('lenghtofAminoAcidSeq', metavar='N', help='lenght of the amino acid sequence', type=int, default='34')
@@ -71,4 +72,7 @@ for itrate in range(1,numVar+1):
 	del varSeq[:] #empty out the temp lists
         del nuclSeq_Slice[:]
 
-
+#code for Muscle alignment of sequences
+muscle_exe = r'/home/littleboy/local_bin/muscle-MSA/muscle3.8.31_i86linux64'
+muscle_cline = MuscleCommandline(muscle_exe, input='output_%dvariants.fa' % numVar, out='muscle-out%dvariants.aln' % numVar, clw=True) #build command
+muscle_cline() #execute command

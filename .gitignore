@@ -2,4 +2,5 @@
 
 biopython-scripts/venvBioPy/*
 *.fa
+*.aln
 
