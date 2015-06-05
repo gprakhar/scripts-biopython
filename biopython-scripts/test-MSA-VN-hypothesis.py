@@ -14,6 +14,7 @@ lenght = args.lenghtofAminoAcidSeq*3
 numVar = args.numberofVariants #default is assumed to be 6
 nuclSeq = list()
 
+##generate random nulcletide sequence
 for i in range(0,lenght):
 	numRand = randint(1,4)
 	if numRand == 1:
@@ -24,45 +25,50 @@ for i in range(0,lenght):
                 nuclSeq.append('G')
 	elif numRand == 4:
                 nuclSeq.append('C')
-
+##write random nulcletide sequence to file
 with open('output_%dvariants.fa' % numVar, 'w') as fileHandle1:
 	fileHandle1.write(">ori-seq\n")
 	fileHandle1.write("".join(nuclSeq))
 	fileHandle1.write("\n")
 	fileHandle1.close()
-	
-print ("".join(nuclSeq))
 
+#temp list variables for generating variants
 varSeq = list()
 nuclSeq_Slice = list()
+
+#the variant generation loop
 for itrate in range(1,numVar+1):
-	locDup = randint(0,lenght)
-	print "temp%d location of dplication: %d" % (itrate, locDup)
+	locDup = randint(0,lenght) #random location for duplication insertion
+#	print "temp%d location of dplication: %d" % (itrate, locDup)
+	#size of duplication based on percentage (in multiples of 3), the value has to be converted to int before useage
 	sizeDup = ((3*itrate)/100.0)*lenght # BUG what will happen when itrate value goes above 100 # SOLUTION conditional to not let percentage go beyond 49%
-	print "temp%d size of duplication in int: %f" % (itrate, int(sizeDup))
+#	print "temp%d size of duplication in int: %f" % (itrate, int(sizeDup))
+	#if location of duplication insertion is greater than half of lenght of sequence, than copy duplication from upstream otherwise		downstream
 	if locDup < (lenght-locDup):
 		NuclSeq_Slice = nuclSeq[locDup:int(locDup+sizeDup)]
-		print "NuclSeq_Slice len = %d :%s" % (len(NuclSeq_Slice), NuclSeq_Slice)
-		print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
+#		print "NuclSeq_Slice len = %d :%s" % (len(NuclSeq_Slice), NuclSeq_Slice)
+#		print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
 		varSeq = nuclSeq[:locDup]
-		print "temp%d: R1 len=%d :%s" % (itrate, len(varSeq), varSeq)
+#		print "temp%d: R1 len=%d :%s" % (itrate, len(varSeq), varSeq)
 		varSeq.extend(NuclSeq_Slice)
-		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
+#		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
 		varSeq.extend(nuclSeq[locDup:])
 	else:
 		NuclSeq_Slice = nuclSeq[int(locDup-sizeDup):locDup]
-		print "NuclSeq_Slice len = %d :%s" % (len(NuclSeq_Slice), NuclSeq_Slice)
-                print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
+#		print "NuclSeq_Slice len = %d :%s" % (len(NuclSeq_Slice), NuclSeq_Slice)
+#               print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
 		varSeq = nuclSeq[:int(locDup-sizeDup)]
-		print "temp%d: R1 len=%d :%s" % (itrate, len(varSeq), varSeq)
+#		print "temp%d: R1 len=%d :%s" % (itrate, len(varSeq), varSeq)
                 varSeq.extend(NuclSeq_Slice)
-		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
+#		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
                 varSeq.extend(nuclSeq[int(locDup-sizeDup):])
-	print "temp%d: R-fi len=%d :%s" % (itrate, len(varSeq), varSeq)
+#	print "temp%d: R-fi len=%d :%s" % (itrate, len(varSeq), varSeq)
 	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
 		fileHandle2.write('>var-seq%d\n' % itrate)
 		fileHandle2.write("".join(varSeq))
 		fileHandle2.write("\n")
 		fileHandle2.close()
-	del varSeq[:]
+	del varSeq[:] #empty out the temp lists
         del nuclSeq_Slice[:]
+
+
