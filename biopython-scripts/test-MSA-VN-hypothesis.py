@@ -50,20 +50,19 @@ for itrate in range(1,numVar+1):
 		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
 		varSeq.extend(nuclSeq[locDup:])
 	else:
-		pass
-#		temp.append(nuclSeq.insert(locDup, nuclSeq[locDup-sizeDup:locDup]))
+		NuclSeq_Slice = nuclSeq[int(locDup-sizeDup):locDup]
+		print "NuclSeq_Slice len = %d :%s" % (len(NuclSeq_Slice), NuclSeq_Slice)
+                print "temp%d: len=%d :%s" % (itrate, len(varSeq), varSeq)
+		varSeq = nuclSeq[:int(locDup-sizeDup)]
+		print "temp%d: R1 len=%d :%s" % (itrate, len(varSeq), varSeq)
+                varSeq.extend(NuclSeq_Slice)
+		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
+                varSeq.extend(nuclSeq[int(locDup-sizeDup):])
 	print "temp%d: R-fi len=%d :%s" % (itrate, len(varSeq), varSeq)
-	del varSeq[:]
-'''	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
+	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
 		fileHandle2.write('>var-seq%d\n' % itrate)
-		fileHandle2.write("".join(temp))
-		fileHandle1.write("\n")
+		fileHandle2.write("".join(varSeq))
+		fileHandle2.write("\n")
 		fileHandle2.close()
-	del temp[:]
-'''
-
-
-
-			
-	
-
+	del varSeq[:]
+        del nuclSeq_Slice[:]
