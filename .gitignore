@@ -3,4 +3,5 @@
 biopython-scripts/venvBioPy/*
 *.fa
 *.aln
+*.txt
 

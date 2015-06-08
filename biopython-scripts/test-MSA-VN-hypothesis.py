@@ -33,6 +33,11 @@ with open('output_%dvariants.fa' % numVar, 'w') as fileHandle1:
 	fileHandle1.write("\n")
 	fileHandle1.close()
 
+#initialize the variant details file
+with open('output_%dvariants-details.txt' % numVar,'a') as fileHandle2:
+	fileHandle2.write('seq-name\tlocation\tduplication-percent\tduplication-size\n')
+	fileHandle2.close()
+
 #temp list variables for generating variants
 varSeq = list()
 nuclSeq_Slice = list()
@@ -64,15 +69,21 @@ for itrate in range(1,numVar+1):
 #		print "temp%d: R2 len=%d :%s" % (itrate, len(varSeq), varSeq)
                 varSeq.extend(nuclSeq[int(locDup-sizeDup):])
 #	print "temp%d: R-fi len=%d :%s" % (itrate, len(varSeq), varSeq)
-	with open('output_%dvariants.fa' % numVar,'a') as fileHandle2:
-		fileHandle2.write('>var-seq%d\n' % itrate)
-		fileHandle2.write("".join(varSeq))
-		fileHandle2.write("\n")
-		fileHandle2.close()
+	#write the variant sequence to file
+	with open('output_%dvariants.fa' % numVar,'a') as fileHandle3:
+		fileHandle3.write('>var-seq%d\n' % itrate)
+		fileHandle3.write("".join(varSeq))
+		fileHandle3.write("\n")
+		fileHandle3.close()
+	#write variant sequence details to file 
+	with open('output_%dvariants-details.txt' % numVar,'a') as fileHandle4:
+		fileHandle4.write('var-seq%d\t%d\t%d\t%d\n' % (itrate, locDup, itrate*3, int(sizeDup)))
+		fileHandle4.close()
 	del varSeq[:] #empty out the temp lists
         del nuclSeq_Slice[:]
 
 #code for Muscle alignment of sequences
 muscle_exe = r'/home/littleboy/local_bin/muscle-MSA/muscle3.8.31_i86linux64'
-muscle_cline = MuscleCommandline(muscle_exe, input='output_%dvariants.fa' % numVar, out='muscle-out%dvariants.aln' % numVar, clw=True) #build command
+#build command
+muscle_cline = MuscleCommandline(muscle_exe, input='output_%dvariants.fa' % numVar, out='muscle-out%dvariants.aln' % numVar, clw=True) 
 muscle_cline() #execute command
