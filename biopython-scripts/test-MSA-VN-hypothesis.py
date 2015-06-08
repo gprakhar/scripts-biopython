@@ -5,39 +5,34 @@
 import argparse
 from random import randint
 from Bio.Align.Applications import MuscleCommandline
+from userdefinedFunctions import genrateSequence, callMuscle, tandemDuplication
+from sys import exit
 
+#argument parsing
 parser = argparse.ArgumentParser()
-parser.add_argument('lenghtofAminoAcidSeq', metavar='N', help='lenght of the amino acid sequence', type=int, default='34')
-parser.add_argument('-v', '--numberofVariants', default='6', help='Input number of variant sequences with tandem duplications, to produce for Multiple sequence alignment. Half will have tandem  and other half non tandem Default "6".', type=int)
+parser.add_argument('lenghtofAminoAcidSeq', metavar='N', help='lenght of the amino acid sequence', type=int)
+parser.add_argument('-v', '--numberofVariants', default='6', help='Input number of variant sequences with tandem duplications, to produce for Multiple sequence alignment. Default "6". Value should not be greater than 33', type=int)
 args = parser.parse_args()
 
 lenght = args.lenghtofAminoAcidSeq*3
 numVar = args.numberofVariants #default is assumed to be 6
-nuclSeq = list()
 
-##generate random nulcletide sequence
-for i in range(0,lenght):
-	numRand = randint(1,4)
-	if numRand == 1:
-		nuclSeq.append('A')
-	elif numRand == 2:
-		nuclSeq.append('T')
-	elif numRand == 3:
-                nuclSeq.append('G')
-	elif numRand == 4:
-                nuclSeq.append('C')
-##write random nulcletide sequence to file
-with open('output_%dvariants.fa' % numVar, 'w') as fileHandle1:
-	fileHandle1.write(">ori-seq\n")
-	fileHandle1.write("".join(nuclSeq))
-	fileHandle1.write("\n")
-	fileHandle1.close()
+if numVar > 33:
+	print "***ERROR***\n Number of variant sequences (the option -v) cannot be more than 33\n Please use a value either equal to or less than 33\n"
+	parser.print_help()
+	exit()
+
+#call to funtion genrateSequence() to generate random sequence
+nuclSeq = genrateSequence(lenght, numVar)
 
 #initialize the variant details file
 with open('output_%dvariants-details.txt' % numVar,'w') as fileHandle2:
-	fileHandle2.write('seq-name\tlocation\tduplication-percent\tduplication-size\n')
+	fileHandle2.write('seq-name\tlocation\tduplication-percent\tduplication-size\ttotal-length-variant\n')
 	fileHandle2.close()
 
+#call function tandemDuplication(numVar, nuclSeq) to generate duplication and writw them to file
+tandemDuplication(numVar, nuclSeq, lenght)
+'''
 #temp list variables for generating variants
 varSeq = list()
 nuclSeq_Slice = list()
@@ -77,13 +72,10 @@ for itrate in range(1,numVar+1):
 		fileHandle3.close()
 	#write variant sequence details to file 
 	with open('output_%dvariants-details.txt' % numVar,'a') as fileHandle4:
-		fileHandle4.write('var-seq%d\t%d\t%d\t%d\n' % (itrate, locDup, itrate*3, int(sizeDup)))
+		fileHandle4.write('var-seq%d\t%d\t%d\t%d\t%d\n' % (itrate, locDup, itrate*3, int(sizeDup), len(varSeq)))
 		fileHandle4.close()
 	del varSeq[:] #empty out the temp lists
         del nuclSeq_Slice[:]
 
-#code for Muscle alignment of sequences
-muscle_exe = r'/home/littleboy/local_bin/muscle-MSA/muscle3.8.31_i86linux64'
-#build command
-muscle_cline = MuscleCommandline(muscle_exe, input='output_%dvariants.fa' % numVar, out='muscle-out%dvariants.aln' % numVar, clw=True) 
-muscle_cline() #execute command
+'''
+callMuscle(numVar)
