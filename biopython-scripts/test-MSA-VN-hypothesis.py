@@ -34,7 +34,7 @@ with open('output_%dvariants.fa' % numVar, 'w') as fileHandle1:
 	fileHandle1.close()
 
 #initialize the variant details file
-with open('output_%dvariants-details.txt' % numVar,'a') as fileHandle2:
+with open('output_%dvariants-details.txt' % numVar,'w') as fileHandle2:
 	fileHandle2.write('seq-name\tlocation\tduplication-percent\tduplication-size\n')
 	fileHandle2.close()
 
