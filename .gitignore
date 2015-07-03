@@ -5,3 +5,4 @@ biopython-scripts/venvBioPy/*
 *.aln
 *.txt
 *.pyc
+*.xml
