@@ -33,7 +33,7 @@ def callMuscle(numVar):
 	#code for Muscle alignment of sequences
 	muscle_exe = r'/home/littleboy/local_bin/muscle-MSA/muscle3.8.31_i86linux64'
 	#build command
-	muscle_cline = MuscleCommandline(muscle_exe, input='output_%dvariants.fa' % numVar, out='muscle-out_%dvariants.aln' % numVar, clw=True)
+	muscle_cline = MuscleCommandline(muscle_exe, input='output_%dvariants.fa' % numVar, out='muscle-out_%dvariants.afa' % numVar)
 	muscle_cline() #execute command
 
 

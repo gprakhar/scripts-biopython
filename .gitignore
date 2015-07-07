@@ -6,3 +6,4 @@ biopython-scripts/venvBioPy/*
 *.txt
 *.pyc
 *.xml
+*.afa
