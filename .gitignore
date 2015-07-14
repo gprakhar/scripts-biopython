@@ -7,3 +7,4 @@ biopython-scripts/venvBioPy/*
 *.pyc
 *.xml
 *.afa
+*.tar
