@@ -8,3 +8,4 @@ biopython-scripts/venvBioPy/*
 *.xml
 *.afa
 *.tar
+biopython-scripts/xml-files/*
