@@ -8,7 +8,7 @@ import os, glob
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('Xmlfilename', metavar='f', help='name of xml file')
+parser.add_argument('--Xmlfilename', metavar='-f', help='name of xml file')
 
 args = parser.parse_args()
 inputfileName = str(args.Xmlfilename)
