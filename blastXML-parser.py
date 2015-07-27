@@ -24,6 +24,7 @@ with open(inputfileName, 'r') as result_handle:
 		print '\n\n%s' % blast_record.query #prints query's full name
 		print 'Query lenght: %d' % blast_record.query_length
 		for alignment in blast_record.alignments:
+			print 'Hit name = %s' % alignment.title
 			hitLength = alignment.length
 			print 'Hit length = %s' % str(hitLength)
 			#for hsp in 
