@@ -23,12 +23,21 @@ with open(inputfileName, 'r') as result_handle:
 	for blast_record in blast_records:
 		print '\n\n%s' % blast_record.query #prints query's full name
 		print 'Query lenght: %d' % blast_record.query_length
-		for description in blast_record.descriptions:
-			for alignment in blast_record.alignments:
-				print 'Hit name = %s' % description.title
-				print 'evalue = %s' % str(description.e) # loops on all hits for the query and prints the corresponding e-value
-				print 'Hit length = %s' % str(alignment.length)
-				print 'Number of Alignments = %s' % str(description.num_alignments)
+		for alignment in blast_record.alignments:
+			hitLength = alignment.length
+			for hsp in
+			print blast_record.alignments.hsps
+			break
+		break
+	'''for description in blast_record.descriptions:
+			print '\nHit name = %s' % description.title
+			print 'evalue = %s' % str(description.e)
+			print 'Number of Alignments = %s' % str(description.num_alignments)
+		#for alignment in blast_record.alignments:
+#				print 'Hit name = %s' % description.title
+#				print 'evalue = %s' % str(description.e) # loops on all hits for the query and prints the corresponding e-value
+			print 'Hit length = %s' % str(hitLength)  '''
+#				print 'Number of Alignments = %s' % str(description.num_alignments)
 			#e_value_dict[blast_record.query] = description.e
 			#print "%s : %s" % (blast_record.query, str(description.e))
 
