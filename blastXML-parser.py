@@ -25,10 +25,15 @@ with open(inputfileName, 'r') as result_handle:
 		print 'Query lenght: %d' % blast_record.query_length
 		for alignment in blast_record.alignments:
 			hitLength = alignment.length
-			for hsp in
-			print blast_record.alignments.hsps
-			break
-		break
+			print 'Hit length = %s' % str(hitLength)
+			#for hsp in 
+			print 'Number of HSP = %d ' % len(alignment.hsps)
+			for hsp in alignment.hsps:
+				print hsp.num_alignments
+				print hsp.match
+		
+			
+		
 	'''for description in blast_record.descriptions:
 			print '\nHit name = %s' % description.title
 			print 'evalue = %s' % str(description.e)
