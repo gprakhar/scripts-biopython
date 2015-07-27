@@ -59,7 +59,7 @@ target/
 =======
 ##User generated gitignore file
 
-biopython-scripts/venvBioPy/*
+venvBioPy/*
 *.fa
 *.aln
 *.txt
@@ -67,5 +67,5 @@ biopython-scripts/venvBioPy/*
 *.xml
 *.afa
 *.tar
-biopython-scripts/xml-files/*
+xml-files/*
 >>>>>>> 029c91d89f91678106dc1bbfa7c0c2282ce7fb08
