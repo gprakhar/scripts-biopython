@@ -31,7 +31,7 @@ with open(inputfileName, 'r') as result_handle:
 			print 'Number of HSP = %d ' % len(alignment.hsps)
 			for hsp in alignment.hsps:
 				print hsp.num_alignments
-				print hsp.match
+#				print hsp.match
 		
 			
 		
