@@ -15,15 +15,22 @@ import argparse
 filenames = [os.path.basename(x) for x in glob.glob('*.out')]
 
 for filename in filenames:
-	print filename
+	print 'Protien Name = %s' % filename[:-4]
 	for qresult in SearchIO.parse(filename,'hmmer3-text'):
 		print 'lenght of qresult = %d' % len(qresult)
+		print 'Query Id = %s' % (qresult.id)
+		flag = 0
 		for hit in qresult:
-			print 'lenght of hit = %d' % len(hit)
+			flag = flag + 1
+			print '\nQuery Id = '#%s' % (qresult.id)
+			print '%d. number of hit = %d' % (flag, len(hit))
+			#print hit
 #			beste = hit[0].hsps[0].evalue
- #       		query = hit[0].query_id
+	       		Hit = hit.id
   #      		hit = hit[0].id.replace('.hmm', '')
 #	        	print query + ',' + hit + ',' + str(beste)
-			
-	
-	
+			print 'Name of Hit %s' % Hit
+#			print 'Discription of Query %s' % hit.query_description
+			for hsp in hit:
+				print 'HSP bitscore : %s' % (str(hsp.bitscore))
+	print '*' * 100
