@@ -40,5 +40,5 @@ for filename in filenames:
 	               	                break
 				else:
 					print 'HSP bitscore : %s' % (str(hsp.bitscore))
-					print 'evalue of HSP = %s' % (str(hsp.evalue))
+					print 'evalue of HSP : %s' % (str(hsp.evalue))
 		print '##' * 10

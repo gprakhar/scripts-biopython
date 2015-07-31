@@ -14,9 +14,6 @@ import os, glob
 
 filenames = [os.path.basename(x) for x in glob.glob('*.out')]
 flag_once = 0
-print filenames
-filenames.sort()
-print filenames
 
 for filename in filenames:
 	'''protName_new = filename[8:14]
@@ -29,7 +26,7 @@ for filename in filenames:
 	protName = filename[8:14]'''
 	print '\nProtien Name = %s' % filename[8:14]
 	qresults = SearchIO.parse(filename,'hmmer3-text')
-	'''for qresult in qresults:
+	for qresult in qresults:
 		print 'Query Name = %s' % (qresult.id)
 		print 'Query Details = %s' % (qresult.description)
 		print '\n\nNumber of Hits = %d' % len(qresult)
@@ -44,7 +41,7 @@ for filename in filenames:
 			else:
 				print '\n%d.Name of Hit =  %s' % (flag, hit.id)
 				print 'number of HSP = %d' % (len(hit))
-#				print 'Discription of Query %s' % hit.query_description
+				print 'Discription of Query %s' % hit.description
 				flag2 = 0
 			for hsp in hit:
 				flag2 = flag2 +1
@@ -53,4 +50,5 @@ for filename in filenames:
 	               	                break
 				else:
 					print 'HSP bitscore : %s' % (str(hsp.bitscore))
-		print '##' * 10'''
+					print 'evalue of HSP : %s' % (str(hsp.evalue))
+		print '##' * 10
