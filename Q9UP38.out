@@ -1,0 +1,715 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/interns/CHG_Nunjundiah-Project/raw-data/DPM-prot-HMM/PF01534.hmm
+# target sequence database:        dicty_primary_protein.fa
+# number of worker threads:        20
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Frizzled  [M=317]
+Accession:   PF01534.13
+Description: Frizzled/Smoothened family membrane region
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                -----------
+    8.5e-17   60.7   9.7    2.5e-16   59.1   9.7    1.6  1  DDB0191443|DDB_G0283615  |Protein|gene: rpkA on chromosome: 4
+    2.9e-10   39.2  18.7    4.4e-10   38.6  18.7    1.3  1  DDB0232056|DDB_G0289725  |Protein|gene: fscA on chromosome: 5
+    1.1e-07   30.7  26.2    8.8e-06   24.5  22.2    2.5  1  DDB0231831|DDB_G0286037  |Protein|gene: lrlA on chromosome: 4
+    1.7e-07   30.1  16.6    2.6e-07   29.5  16.6    1.3  1  DDB0231316|DDB_G0288261  |Protein|gene: fslG on chromosome: 5
+    2.2e-07   29.7  10.0    4.1e-07   28.9  10.0    1.5  1  DDB0216256|DDB_G0277831  |Protein|gene: carD on chromosome: 3
+    3.7e-06   25.7  15.5    1.8e-05   23.5  15.5    1.9  1  DDB0231833|DDB_G0274287  |Protein|gene: fslC on chromosome: 2
+    0.00011   20.9  23.6    0.00019   20.1  23.6    1.4  1  DDB0230120|DDB_G0270730  |Protein|gene: fslB on chromosome: 1
+    0.00059   18.5  26.5      0.038   12.5  17.0    2.5  2  DDB0215007|DDB_G0280983  |Protein|gene: crlA on chromosome: 3
+    0.00077   18.1   9.7       0.01   14.4   9.7    2.2  1  DDB0231315|DDB_G0288253  |Protein|gene: fslF on chromosome: 5
+     0.0034   16.0   3.1     0.0034   16.0   3.1    2.2  2  DDB0346905|DDB_G0282567  |Protein|gene: DDB_G0282567 on chrom
+
+
+Domain annotation for each sequence (and alignments):
+>> DDB0191443|DDB_G0283615  |Protein|gene: rpkA on chromosome: 4 position 1020192 to 1022856
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.1   9.7     2e-19   2.5e-16      14     243 ..      32     243 ..      21     265 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 59.1 bits;  conditional E-value: 2e-19
+                 Frizzled  14 ialwsilclvstlftvlTFlidssrfkYPerpiiflslCyllvsvgylirlvlgreaiaCdkdetkreelslitegtesasCtvvF 99 
+                               + +++l+++ +lf ++TF+   +  k P r+i+fls+C +l+s+ yl+ +vl +++    +             +t++ +C +  
+  DDB0191443|DDB_G0283615  32 SGSLALLSCIGALFVIITFITIKDLKKHPTRMIFFLSVCDVLFSLKYLVTAVLPHSD----S------------FQTKRVACYLQA 101
+                              5678999*********************************************97432....1............235789****** PP
+
+                 Frizzled 100 lllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGiCfvgnknsealrgfvl 185
+                               +  +f++a++ W  +++l  ++++ + +  e+ + +s+++H   W+   v ++++    +v g +  G+C ++ +++  l++f +
+  DDB0191443|DDB_G0283615 102 GIQQFFGLASIGWSGMISLNLIISTSRPF--ENSSTYSKFYHGWIWSYSIVTSAILFKNYDVIGPSGDGTCWIKAEDKPLLLMF-F 184
+                              ***********************998887..66689**************************************9998877776.8 PP
+
+                 Frizzled 186 aPllvylliGllfllagfvslfrirkvlkkqgk..katekleklmirigifsvlytvpal 243
+                              +Pll+y+ i+++ l+++ +s  + ++   ++++   + ++ + +++r+  +++++++  +
+  DDB0191443|DDB_G0283615 185 IPLLAYFSISISSLIIAAISTRN-KSLTSSTTNnsWSDRNRTGMLLRMSTYTLVFILCWA 243
+                              9*****************99988.333333333332234455677899999998887655 PP
+
+>> DDB0232056|DDB_G0289725  |Protein|gene: fscA on chromosome: 5 position 3167501 to 3169440
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.6  18.7   3.6e-13   4.4e-10       2     295 ..      76     358 ..      75     373 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 38.6 bits;  conditional E-value: 3.6e-13
+                 Frizzled   2 fteeekkfaevwialwsilclvstlftvlTFlidssrfkYPerp..iiflslCyllvsvgylirlvlgreaiaCdkdetkreelsl 85 
+                              +t++e + ++++i ++ +++++++l+ +l +    +r+ Y      i+fl ++ +l+ ++ +i +  g +++ C ++++       
+  DDB0232056|DDB_G0289725  76 YTSQEVNTLSLMIKITGTISFIASLILLLIYSPLINRMGYNRHTigIFFLTFSVFLIMLTDIIYVHHG-NDLICPQSHR------- 153
+                              899999*************************9999999998876337****************99999.8899998755....... PP
+
+                 Frizzled  86 itegtesasCtvvFlllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGi.C 170
+                               ++ ++++ Ct++ +l  y  +aa+++w  l+l  +l + +k ++ ++ek   ++ ++  ++ +++t + L+ +k  g  +tG+ C
+  DDB0232056|DDB_G0289725 154 -YSRQNDSGCTITGILFQYGCIAAVLFWATLSLDLYL-TLKKISTKKVEK---WYLIILTLIALILTFVPLV-KKSYGYLVTGLaC 233
+                              .456799******************************.899999998886...5556666777777777765.6679******945 PP
+
+                 Frizzled 171 fvgnknsealrgfvlaPllvylliGllfllagfvslfrirkvlkkqgkkatekleklmirigifsvlytvpaliviacliyelanr 256
+                                   +s+  ++f  aP +++l iG ++++  ++ +++i k  k+++   +++++ l++ + if+ + +++a+  ++ + y+  + 
+  DDB0232056|DDB_G0289725 234 W-I-LDSTDQIIFFWAPFTAILGIGSILIVLVVYEIYKISKITKQNRGIFQSHIRPLLMVLFIFGQFLFILAFNALINNKYDEYS- 316
+                              5.3.4455567899*********************************9889******************9999999888887322. PP
+
+                 Frizzled 257 eeweesleaeac.........eceeeeeskpslsvfllklfmllvvGi 295
+                               +  +   ++ c          c   + ++  +++ ++ lf+l ++Gi
+  DDB0232056|DDB_G0289725 317 ARMDS---YIDClfssssysyLC---RLKTFPFEMEFIVLFFLRLIGI 358
+                              22222...234444444444444...4444445555555555555555 PP
+
+>> DDB0231831|DDB_G0286037  |Protein|gene: lrlA on chromosome: 4 position 3985122 to 3986208
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5  22.2   7.1e-09   8.8e-06      12     236 ..      12     204 ..       4     220 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 7.1e-09
+                 Frizzled  12 vwialwsilclvstlftvlTFlidssrfkYPerpiiflslCyllvsvgylirlvlgreaiaCdkdetkreelslitegtesasCtv 97 
+                              +++ ++ +l++v +++t++TF++ ++  +YP + ii+l+++ ++ s+ ++ ++ ++       ++              +s  C+ 
+  DDB0231831|DDB_G0286037  12 YLTDILLSLSIVGSFLTIFTFMLYPKLRSYPIKLIIYLCMSIVF-SLFFF-EISFR-------SS--------------NSLFCIP 74 
+                              5666788999****************************987654.33333.33332.......22..............4678888 PP
+
+                 Frizzled  98 vFlllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalsk.vdgdeltGiCfvgnknsealrg 182
+                                +l+ yf +a ++W   +++ +f     k  ++  e +  y+Hl++W++p++  i + a++k vd     G C+ + + s ++ +
+  DDB0231831|DDB_G0286037  75 AAILVHYFFLANFFWTFSVSFNFFQ-MIVKRNRD-SEFYERYYHLISWGIPFIIIIFCAAFKKyVD---RGGFCYLEDQYSVYFGF 155
+                              999********************98.45555444.478999***************9999998455...47****98888777665 PP
+
+                 Frizzled 183 fvlaPllvylliGllfllagfvslfrirkvlkkqgkkatekleklmirigifsv 236
+                              f  +P +++++  +++ +     +++   +l+++ +++++ ++++ + + if+ 
+  DDB0231831|DDB_G0286037 156 F--MPGVIIVCSNICIYVFVAKEIYK---TLRHTPTQKRQTVKEFRVYFSIFVS 204
+                              5..67777766666665555544444...7777777777888888888888864 PP
+
+>> DDB0231316|DDB_G0288261  |Protein|gene: fslG on chromosome: 5 position 1308843 to 1310648
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.5  16.6   2.1e-10   2.6e-07       2     315 ..     234     537 ..     233     539 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 29.5 bits;  conditional E-value: 2.1e-10
+                 Frizzled   2 fteeekkfaevwialwsilclvstlftvlTFlids.srfkYPerpiiflslCyllvsvgylirlvlgreaiaCdkdetkreelsli 86 
+                              +t+e+ +++e +  ++s++++v+++  +l+F i   ++ kY   +i  ls++  l+ +g +i++ +g e++ C + ++        
+  DDB0231316|DDB_G0288261 234 YTKEKWNQIENLSKVLSTISFVCSIYNILSFGILKkKKTKY-TICISALSASVALINLGDIIKIGVGYEKVLCPEPGRF------- 311
+                              68888999***********************8877488888.789*****************************99774....... PP
+
+                 Frizzled  87 tegtesasCtvvFlllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGiCfv 172
+                               ++ ++  C ++   l+ +++++++ w      ++ +a ++        k  yf ++  ++ ++  i++   sk ++   +  C +
+  DDB0231316|DDB_G0288261 312 ATQVDDPLCGLTA-ALFHVGICSTVLWTTTMAIYLYSAIKNIKL----FKFRYFIIFNTGFSLTSLIIAASASKFEAGTGSIECWI 392
+                              4568899999875.56899********99888888888877653....35679999999999999999999999999999999997 PP
+
+                 Frizzled 173 gnknsealrgfvlaPllvylliGllfllagfvslfrirkvlkkqgk....katekleklmirigifsvlytvpaliviacliyela 254
+                                    + +++  +P  ++lliG++ ++  +v ++++ k++k +++    ++ + + ++++  g f+ l++++  i      y  a
+  DDB0231316|DDB_G0288261 393 RD--RWYSICLFWLPCGICLLIGTICIASVIVEIYKVSKNIKLSESetimRQIKPIISVILVSGSFTYLFIIFFDIERNFGGYRSA 476
+                              65..5566777889*****************************9974333333334444444444445555544444444455544 PP
+
+                 Frizzled 255 nreeweesleaeac.........eceeeeeskpslsvfllklfmllvvGits.gfWvwskktleswrrflr 315
+                               +       +++ c         ec   ++s ps+  +++ +f++ + Gi+   ++  sk+  +sw +++ 
+  DDB0231316|DDB_G0288261 477 VT-------DYVLCllnstdngiEC---HTSGPSYNPYFMFYFFMRFFGILFfLIYGTSKNARDSWYELFI 537
+                              44.......4445555555557788...8999******999999999999861567788889999998876 PP
+
+>> DDB0216256|DDB_G0277831  |Protein|gene: carD on chromosome: 3 position 498291 to 499717
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.9  10.0   3.3e-10   4.1e-07      89     244 ..      74     225 ..      16     238 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 28.9 bits;  conditional E-value: 3.3e-10
+                 Frizzled  89 gtesasCtvvFlllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGiCfvgn 174
+                              g+ s +C +  +++ y s+a  +W ++l+++ +     k   e  ek+ +++H v+W++p++ +i++La + ++  ++   C +++
+  DDB0216256|DDB_G0277831  74 GSTSFQCYLYAITITYGSLACWLWTLCLAFSIYN-LIVKREPE-PEKYEKFYHGVCWTIPLICVIVMLAKKTIE--PVGNWCWISE 155
+                              557889******************9999998886.45555555.59***************************7..799******* PP
+
+                 Frizzled 175 knsealrgfvlaPllvylliGllfllagf.vslfrirkvlkkqgkkatekleklmirigifsvlytvpali 244
+                              k + ++ g+   P +++ +i+++++     ++   ir+++ ++++k+ +   kl+  i++f +  +v+a++
+  DDB0216256|DDB_G0277831 156 KYVGYRFGLFYGPFFAIWIISAVLVGLTSrYTYSVIRNSVSDNKDKHMTYQFKLINYIIVFLLC-WVFAIV 225
+                              *****************99999888665515556688888888877677777888888877554.444443 PP
+
+>> DDB0231833|DDB_G0274287  |Protein|gene: fslC on chromosome: 2 position 4049951 to 4051858
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.5  15.5   1.4e-08   1.8e-05       1     299 [.     231     516 ..     231     533 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 23.5 bits;  conditional E-value: 1.4e-08
+                 Frizzled   1 lfteeekkfaevwialwsilclvstlftvlTFlids.srfkYPerpiiflslCyllvsvgylirlvlgreaiaCdkdetkreelsl 85 
+                              +f++++  ++ ++ +++s+l++++++  ++TF + s  + kY + +i f s++ +l+s++ ++ + +g e++ C ++++ +     
+  DDB0231833|DDB_G0274287 231 FFKNNKWVQMYKMSIVLSTLSFICSIYNIITFGLLSkLKSKY-NLCITFFSVSTVLMSLMDIVTYGIGYEELLCPESGRYA----- 310
+                              677777788899999*****************7666377888.89******************************987653..... PP
+
+                 Frizzled  86 itegtesasCtvvFlllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGiCf 171
+                                  +++ +C v+  +     + +++Ww  ++++ +   ++++   +      y  ++  ++ +++ i+ L  ++    + +  C 
+  DDB0231833|DDB_G0274287 311 ---IQSDVACGVTGAFFHIGITTGVLWWTTMSICLYS-EVKRFKMIS-F---RYIIIFNSVISLILLIIPLSGQAFMSGNGSLGCW 388
+                              ...4589999999999999999************996.555554322.2...3444555678888899999888866666666698 PP
+
+                 Frizzled 172 vgnknsealrgfvlaPllvylliGllfllagfvslfrirkvlkkqgkkatekleklmirigifsvlytv..paliviacliyelan 255
+                              +   ++ ++ g   +P  + l+iG++ ++  ++ +f+i ++l k++k        lm++i  f ++ +v    l +++ ++ + +n
+  DDB0231833|DDB_G0274287 389 IR--KTWYANGTFWIPCGISLFIGAICIVLVIYEIFKISRNLSKDNK-------PLMFQIRPFLCVLLVggSFLYLFIFYFNNERN 465
+                              65..5667788889***********************9999999883.......46666666655555511666778888889999 PP
+
+                 Frizzled 256 reeweesl.eaeac.........eceeeeeskpslsvfllklfmllvvGitsgf 299
+                               +++++++ ++++c         +c    ++ p +  ++  +f++ + Gits +
+  DDB0231833|DDB_G0274287 466 LDKYKAAIpSYVQCllssdengeDC---LTDGPGFGAYFTFYFFTRLFGITSFS 516
+                              99*****999999999999877777...8999******************9865 PP
+
+>> DDB0230120|DDB_G0270730  |Protein|gene: fslB on chromosome: 1 position 4235323 to 4237343
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.1  23.6   1.6e-07   0.00019       2     298 ..     251     533 ..     250     550 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 20.1 bits;  conditional E-value: 1.6e-07
+                 Frizzled   2 fteeekkfaevwialwsilclvstlftvlTFlids.srfkYPerpiiflslCyllvsvgylirlvlgreaiaCdkdetkreelsli 86 
+                              +te++ +++  +  ++s++++v+++  vlTF i   +r kY + +i f s++ +++ ++ ++ + +g e++ C + ++ +      
+  DDB0230120|DDB_G0270730 251 YTEKKWHQMYNMSKILSTISFVCSIYNVLTFGILNhRRSKY-NYCITFFSASVIIITMMDIVTYGIGYEKLLCPEPGRFA------ 329
+                              78999999999********************8766388888.889*****************************997754...... PP
+
+                 Frizzled  87 tegtesasCtvvFlllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGiCfv 172
+                                 +++ sC ++  l     + +++Ww  ++++ f   +++     +     yf ++  +  ++ +i+ La ++  +   +  C +
+  DDB0230120|DDB_G0270730 330 --VQSDVSCGATGALFHIGITNGVFWWTTMSICLFA-VVKRIK---L-FDFRYFIIFNTTASLISVIIPLAGNAFMAGTGSLACWI 408
+                              ..45899*****99999999*************996.333322...2.245788888889999999*******************7 PP
+
+                 Frizzled 173 gnknsealrgfvlaPllvylliGllfllagfvslfrirkvlkkqgkkatekleklmirigifsvlytvpaliviacliyelanree 258
+                               +  + ++     +P  + l+iG + ++  ++ +++i k++ ++     +++  l i+  +++ l+      +++ ++ + ++++e
+  DDB0230120|DDB_G0270730 409 RK--TWYVNSVFWIPCGIALTIGSVCIILVIYEIYKITKNVSTKD----NRMILLQIKPFLCVTLVGGSFYYLFIFNFDNESHSKE 488
+                              65..5666677789**********************887777765....4566666777777777777777888889999999999 PP
+
+                 Frizzled 259 weesl.eaeac.......eceeeeeskpslsvfllklfmllvvGitsg 298
+                              ++e++ ++++c       ec     + p++  +++ +f++ + Git  
+  DDB0230120|DDB_G0270730 489 YKEKVvDYVMCllsdtgkEC---LMAGPNYVAYFVFYFFIRLFGITFF 533
+                              99998899999999887777...8999*************99999864 PP
+
+>> DDB0215007|DDB_G0280983  |Protein|gene: crlA on chromosome: 3 position 4253816 to 4255131
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.5   2.2   3.2e-05      0.04       2      75 ..      62     133 ..      61     137 .. 0.89
+   2 !   12.5  17.0   3.1e-05     0.038      93     203 ..     129     234 ..     123     301 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 3.2e-05
+                 Frizzled   2 fteeekkfaevwialwsilclvstlftvlTFlidssrfkYPerpiiflslCyllvsvgylirlvlgreaiaCdk 75 
+                              f++e+ + +++++ + s++ +v +lf +++F++      +  ++i+flsl+ l++++ yl  +    ++i C+ 
+  DDB0215007|DDB_G0280983  62 FSKEQIESLDKIVYFSSTMGIVGALFIIVSFFLFKAARTFATKMIFFLSLSDLFAAIFYLPYYR--DSDIMCNL 133
+                              788888999999**********************************************997554..34777775 PP
+
+  == domain 2  score: 12.5 bits;  conditional E-value: 3.1e-05
+                 Frizzled  93 asCtvvFlllyyfsmaasiWwviltltwflaaglkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGiCfvgnknse 178
+                               +C +  + l +f  ++ +W ++++++ f+  + +     +++  +yfH+++W++p++ +i+ L++++    +    Cf++   s 
+  DDB0215007|DDB_G0280983 129 IMCNLQGMGLVFFLSSSYLWTMCISISLFMVFFTTIF--ELNHWFKYFHFICWGIPLFTAIISLIFHAY--GKTGSWCFISDPTSI 210
+                              67888888999*******************7766654..699************************975..466789**9887666 PP
+
+                 Frizzled 179 alrgfvlaPllvylliGllfllagf 203
+                               +r++  +Pl+v+++i l++ +a  
+  DDB0215007|DDB_G0280983 211 -FRLLYYLPLIVVFFINLVVFIAIR 234
+                              .6777789***99999988776644 PP
+
+>> DDB0231315|DDB_G0288253  |Protein|gene: fslF on chromosome: 5 position 1292298 to 1294154
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.4   9.7   8.4e-06      0.01       4     298 ..     233     514 ..     230     531 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 14.4 bits;  conditional E-value: 8.4e-06
+                 Frizzled   4 eeekkfaevwialwsilclvstlftvlTFlidssrfkYPerpiiflslCyllvsvgylirlvlgreaiaCdkdetkreelsliteg 89 
+                              +++ +++ ++  ++s+++++++l  vlTF i  ++ + P+++  f s +  lv ++ +i + +g e++ C + ++++       ++
+  DDB0231315|DDB_G0288253 233 NQKWDQLLTMSKILSTISFILSLYNVLTFGIINKKVSDPHKCTCFFSGSIALVNLCDIITYGIGYEELLCPEPGRSA-------KQ 311
+                              5555667778899***********************************************************98754.......44 PP
+
+                 Frizzled  90 tesasCtvvFlllyyfsmaasiWwviltltwflaa.glkwgseaiekksqyfHlvaWalpavktilvLalskvdgdeltGiCfvgn 174
+                              + + +C ++  +     +  ++W + + l  + +   +kw       k +yf +   ++  + ++++ a+sk ++   +  C +  
+  DDB0231315|DDB_G0288253 312 QLDPVCGLTGAFFHLGITYCVLWSMTMGLVLYCSVkRQKWF------KFNYFLIGNTTFTITTVVIAAATSKFEAGLGSIECWIR- 390
+                              66777776654433333334445455555555543134453......46788777777777777788888999998888889965. PP
+
+                 Frizzled 175 knsealrgfvlaPllvylliGllfllagfvslfrirk.vlkkqgkkatekleklmirigif.svlytvpaliviacliyelanree 258
+                               +  +++ +  +P  + lliG + ++a +  +++  k ++ ++++  +++l+ l+i i i  s+ly++  ++ i   +        
+  DDB0231315|DDB_G0288253 391 -DRWYAISLFWIPCGIALLIGSFCIIAVIHEVYKTSKkSISNRNDLLQRELKPLLIVIFISgSFLYLFIFFFDIERKF------GG 469
+                              .45566677789*********999999999888854303333333445556665555544313333333333332222......22 PP
+
+                 Frizzled 259 weesl.eaeac.......eceeeeeskpslsvfllklfmllvvGitsg 298
+                              +++++ +++ c       ec    ++ ps+  ++l ++++   Gi+  
+  DDB0231315|DDB_G0288253 470 YRSAVeDYVLCllngsqeEC---FTTGPSYVPYFLFYLVIRWFGIIFF 514
+                              22222244455555544466...6778888888888888888887765 PP
+
+>> DDB0346905|DDB_G0282567  |Protein|gene: DDB_G0282567 on chromosome: 3 position 5945975 to 5947124
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.3   1.7      0.49     6e+02     232     232 ..     103     103 ..      18     143 .. 0.58
+   2 !   16.0   3.1   2.7e-06    0.0034     186     251 ..     148     216 ..     135     225 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -1.3 bits;  conditional E-value: 0.49
+                 Frizzled 232 g 232
+                              g
+  DDB0346905|DDB_G0282567 103 G 103
+                              1 PP
+
+  == domain 2  score: 16.0 bits;  conditional E-value: 2.7e-06
+                 Frizzled 186 aPllvylliGllfllagfvslfrirkvlkkqgk...katekleklmirigifsvlytvpaliviacliy 251
+                              +  ++yl+ G+l  ++g +slf+i k+++++     ++ +k++    ++ ifs+ly++  +i+ ++li+
+  DDB0346905|DDB_G0282567 148 FVSVIYLFFGVLSFFIGDMSLFKIVKEFNRDDGyyiNSFTKFKFKFGKVLIFSMLYFFVRFIITITLIF 216
+                              4468************************9999966655667777777888******9998877766554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (317 nodes)
+Target sequences:                        12320  (6916748 residues searched)
+Passed MSV filter:                       921  (0.0747565); expected 246.4 (0.02)
+Passed bias filter:                      421  (0.0341721); expected 246.4 (0.02)
+Passed Vit filter:                        35  (0.00284091); expected 12.3 (0.001)
+Passed Fwd filter:                        10  (0.000811688); expected 0.1 (1e-05)
+Initial search space (Z):              12320  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.37u 0.02s 00:00:00.39 Elapsed: 00:00:00.10
+# Mc/sec: 21926.09
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/interns/CHG_Nunjundiah-Project/raw-data/DPM-prot-HMM/PF01392.hmm
+# target sequence database:        dicty_primary_protein.fa
+# number of worker threads:        20
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Fz  [M=107]
+Accession:   PF01392.18
+Description: Fz domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                -----------
+      3e-07   30.6   5.7    8.5e-07   29.2   5.7    1.8  1  DDB0231534|DDB_G0278289  |Protein|gene: fslO on chromosome: 3
+    2.2e-06   27.8   3.1    4.7e-06   26.8   3.1    1.5  1  DDB0231532|DDB_G0270672  |Protein|gene: fslN on chromosome: 1
+    4.2e-06   26.9   8.5    1.1e-05   25.6   8.5    1.7  1  DDB0305698|DDB_G0286953  |Protein|gene: uduG on chromosome: 4
+    5.3e-06   26.6   5.2    1.4e-05   25.2   5.2    1.7  1  DDB0229858|DDB_G0272885  |Protein|gene: fslJ-1 on chromosome:
+    5.3e-06   26.6   5.2    1.4e-05   25.2   5.2    1.7  1  DDB0267009|DDB_G0274011  |Protein|gene: fslJ-2 on chromosome:
+    5.5e-05   23.3   1.7    0.00012   22.3   1.7    1.5  1  DDB0231856|DDB_G0274773  |Protein|gene: fslH on chromosome: 2
+    8.4e-05   22.7   3.2    0.00027   21.1   3.2    1.8  1  DDB0230120|DDB_G0270730  |Protein|gene: fslB on chromosome: 1
+    8.8e-05   22.7   3.5    0.00025   21.2   3.5    1.7  1  DDB0231833|DDB_G0274287  |Protein|gene: fslC on chromosome: 2
+    9.9e-05   22.5   4.8    9.9e-05   22.5   4.8    2.5  3  DDB0307929|DDB_G0287449  |Protein|gene: DDB_G0287449 on chrom
+    0.00025   21.2   7.3    0.00047   20.3   7.3    1.4  1  DDB0232047|DDB_G0284585  |Protein|gene: fslL on chromosome: 4
+    0.00029   21.0   2.4    0.00057   20.1   2.4    1.4  1  DDB0349756|DDB_G0274033  |Protein|gene: fslM-2 on chromosome:
+    0.00029   21.0   2.4    0.00057   20.1   2.4    1.4  1  DDB0349757|DDB_G0273035  |Protein|gene: fslM-1 on chromosome:
+    0.00031   20.9   4.1    0.00031   20.9   4.1    1.7  1  DDB0231861|DDB_G0284729  |Protein|gene: fslK on chromosome: 4
+    0.00054   20.1   3.8     0.0014   18.8   3.8    1.7  1  DDB0231832|DDB_G0284761  |Protein|gene: fslA on chromosome: 4
+      0.001   19.3   1.0     0.0024   18.1   1.0    1.6  1  DDB0231312|DDB_G0288269  |Protein|gene: fslE on chromosome: 5
+     0.0015   18.7   4.6     0.0038   17.4   4.6    1.6  1  DDB0232055|DDB_G0286609  |Protein|gene: fslQ on chromosome: 4
+     0.0019   18.4   3.7     0.0044   17.2   3.7    1.6  1  DDB0232054|DDB_G0286607  |Protein|gene: fslP on chromosome: 4
+     0.0034   17.6   1.5     0.0034   17.6   1.5    1.8  1  DDB0231316|DDB_G0288261  |Protein|gene: fslG on chromosome: 5
+     0.0035   17.5   2.7     0.0077   16.4   2.7    1.5  1  DDB0231315|DDB_G0288253  |Protein|gene: fslF on chromosome: 5
+     0.0049   17.1   1.5     0.0094   16.1   0.7    1.9  2  DDB0238139|DDB_G0281067  |Protein|gene: DDB_G0281067 on chrom
+
+
+Domain annotation for each sequence (and alignments):
+>> DDB0231534|DDB_G0278289  |Protein|gene: fslO on chromosome: 3 position 625261 to 627925
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   5.7   1.4e-09   8.5e-07       1     106 [.      33     145 ..      33     146 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 1.4e-09
+                              -EE-.....ETT-.S-SEE-GGGS.S-SSHHHHHHHHHHH...HGGGG-HHHTTSTTHHHHHHS---........SS-EEEE---H CS
+                       Fz   1 Cepi..lelCkni.gynstslpnllgheteeevaeeleef...sllvklsCspalklflCsllfpkC........gekekplppCr 72 
+                              Ce i  l+ Ck+  +y++ +lp+ +   t+  ++ +++ +     ++ ++C+++lk +lC + + +C         + + p  pC 
+  DDB0231534|DDB_G0278289  33 CELIdsLSPCKDNlNYTHIYLPTGY---TQAAISAQITPLfqqASILPTDCQSNLKNLLCISSYMECnenipnisPSFPLPSYPCN 115
+                              888888999**977******99965...4444444544444324444458******************999887644456779*** PP
+
+                              HHHHHHHTT-GGGSTT....SHHHH---S----. CS
+                       Fz  73 slCeavrdsCekvlaeagkewpeelnCeklpeks 106
+                              ++Ce+v+d C+  +a     +   +nC++ ++++
+  DDB0231534|DDB_G0278289 116 KYCEKVKDVCSAYMA----ILGPYVNCSAVQNGN 145
+                              ************994....343467898887766 PP
+
+>> DDB0231532|DDB_G0270672  |Protein|gene: fslN on chromosome: 1 position 3740758 to 3742851
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.8   3.1   7.6e-09   4.7e-06       1      87 [.      31     130 ..      31     145 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 26.8 bits;  conditional E-value: 7.6e-09
+                              -EE-.....ETT-.S-SEE-GGGS.S-SSHH.HHHHHHHHH...HGGGG-HHHTTSTTHHHHHHS---......SS-EEEE---HH CS
+                       Fz   1 Cepi..lelCkni.gynstslpnllghetee.evaeeleef...sllvklsCspalklflCsllfpkC......gekekplppCrs 73 
+                              Ce +  +++C+n+ gy++ +lp  + +e  e +v+ +l++    s++ +l C++++ +++C + + +C       + + p +pC++
+  DDB0231532|DDB_G0270672  31 CEILnpISMCSNYlGYKNIYLPYGYTQEIIEaNVTATLTNPmgfSAIPDLICKENIIKLFCISTYRECnsningISFPLPSNPCQK 116
+                              7888889*****99**99999985544433324555555543446666667*****************99887644566779**** PP
+
+                              HHHHHHTT-GGGST CS
+                       Fz  74 lCeavrdsCekvla 87 
+                               C +v ++C + l+
+  DDB0231532|DDB_G0270672 117 NCFKVLETCVPFLS 130
+                              *********99873 PP
+
+>> DDB0305698|DDB_G0286953  |Protein|gene: uduG on chromosome: 4 position 5140537 to 5141493
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   8.5   1.8e-08   1.1e-05       1      79 [.     216     293 ..     216     316 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 1.8e-08
+                              -EE-...ETT-S-..SEE-GGGS.S-SSHHHHHHHHHHHHGGGG-..HHHTTSTTHHHHHHS---SS-EEEE---HHHHHHHH CS
+                       Fz   1 CepilelCknigy..nstslpnllgheteeevaeeleefsllvkl..sCspalklflCsllfpkCgekekplppCrslCeavr 79 
+                              C p l++C++++y  +s+  p++ +       +++ ++f  + +    C +++k+flC+ lfp C+ +  p++pC +lC + +
+  DDB0305698|DDB_G0286953 216 CAPALSFCSEVNYpiDSSDAPSVDAMI-----EQTFNNFVSFAQPtaACASNMKSFLCATLFPLCTGSIIPVLPCANLCPSCS 293
+                              999999****99843444545543333.....3447777555444335*****************7777899*******8754 PP
+
+>> DDB0229858|DDB_G0272885  |Protein|gene: fslJ-1 on chromosome: 2 position 2364367 to 2366904
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.2   5.2   2.3e-08   1.4e-05       5      86 ..      47     142 ..      37     166 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 25.2 bits;  conditional E-value: 2.3e-08
+                              ...ETT-.S-.SEE-GGGS.S-SSHHHHHHHHHHHHGGGG-..HHH.TTSTTHHHHHHS---.........SS-EEEE---HHHHH CS
+                       Fz   5 lelCkni.gy.nstslpnllgheteeevaeeleefsllvkl..sCs.palklflCsllfpkC.........gekekplppCrslCe 76 
+                              ++lC ++ +  ns +++++ ++e  +  ++ ++++ ++ k+  sC+ p+  ++lC++lfp+C          ++  p++pC++ C 
+  DDB0229858|DDB_G0272885  47 IQLCDGFlSNpNSIYINSTSSQEAIQAQGNLVRQYINFYKSfeSCKnPRTFALLCAFLFPECekytdpvskVTYAYPILPCYNNCL 132
+                              789999866434444333333333333345577775555554459637899*************99999886778899******** PP
+
+                              HHHTT-GGGS CS
+                       Fz  77 avrdsCekvl 86 
+                              +++ sC+   
+  DDB0229858|DDB_G0272885 133 NMTTSCQIST 142
+                              ******9865 PP
+
+>> DDB0267009|DDB_G0274011  |Protein|gene: fslJ-2 on chromosome: 2 position 3664882 to 3667419
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.2   5.2   2.3e-08   1.4e-05       5      86 ..      47     142 ..      37     166 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 25.2 bits;  conditional E-value: 2.3e-08
+                              ...ETT-.S-.SEE-GGGS.S-SSHHHHHHHHHHHHGGGG-..HHH.TTSTTHHHHHHS---.........SS-EEEE---HHHHH CS
+                       Fz   5 lelCkni.gy.nstslpnllgheteeevaeeleefsllvkl..sCs.palklflCsllfpkC.........gekekplppCrslCe 76 
+                              ++lC ++ +  ns +++++ ++e  +  ++ ++++ ++ k+  sC+ p+  ++lC++lfp+C          ++  p++pC++ C 
+  DDB0267009|DDB_G0274011  47 IQLCDGFlSNpNSIYINSTSSQEAIQAQGNLVRQYINFYKSfeSCKnPRTFALLCAFLFPECekytdpvskVTYAYPILPCYNNCL 132
+                              789999866434444333333333333345577775555554459637899*************99999886778899******** PP
+
+                              HHHTT-GGGS CS
+                       Fz  77 avrdsCekvl 86 
+                              +++ sC+   
+  DDB0267009|DDB_G0274011 133 NMTTSCQIST 142
+                              ******9865 PP
+
+>> DDB0231856|DDB_G0274773  |Protein|gene: fslH on chromosome: 2 position 3799719 to 3801901
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3   1.7   1.9e-07   0.00012      19      83 ..      55     134 ..      32     153 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 1.9e-07
+                              GGS.S-SSHHHHHHHHHHHHGGGG-.....HH.HTTSTTHHHHHHS---.........SS-EEEE---HHHHHHHHTT-G CS
+                       Fz  19 pnllgheteeevaeeleefsllvkl.....sC.spalklflCsllfpkC.........gekekplppCrslCeavrdsCe 83 
+                                +++++t++e+ ++l+++ +l++l     +C +p   +++C+++fp+C         ++ + p+  C s+C+++  +C+
+  DDB0231856|DDB_G0274773  55 SVYVHNKTQQETLKDLRSLINLLELnnpskECiNPSNYKIMCAMMFPECieingtnivKPITLPIYTCNSFCKEALVTCS 134
+                              34566788888877777775566665554449678899*************9998876555667788********99997 PP
+
+>> DDB0230120|DDB_G0270730  |Protein|gene: fslB on chromosome: 1 position 4235323 to 4237343
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.1   3.2   4.3e-07   0.00027       5      86 ..      62     158 ..      51     178 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 21.1 bits;  conditional E-value: 4.3e-07
+                              ...ETT.-.S-SEE.-GGG.S.S-SSHHHHHHHHHHH..HGGGG-HHH..TTSTTHHHHHHS---..........SS-EEEE---H CS
+                       Fz   5 lelCkn.i.gynst.slpn.llgheteeevaeeleef..sllvklsCs..palklflCsllfpkC..........gekekplppCr 72 
+                               +lC++ + +y++  + +n +++  +++ v+++   f   ++++++C   + +++ +C ++fp+C          ++ + p+++C+
+  DDB0230120|DDB_G0270730  62 QPLCNEkLpNYKNIyTSKNiTIQYINQKIVEKT---FisLTFLQSKCFdlNFAEFGICDIYFPPCfqtpttitpiKSVSLPQRLCK 144
+                              567777344574441444422333333333333...23355667789632457888*********9999998877556677899** PP
+
+                              HHHHHHHTT-GGGS CS
+                       Fz  73 slCeavrdsCekvl 86 
+                              s Ce++ ++C++  
+  DDB0230120|DDB_G0270730 145 SACERMVSNCSSLG 158
+                              **********9843 PP
+
+>> DDB0231833|DDB_G0274287  |Protein|gene: fslC on chromosome: 2 position 4049951 to 4051858
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.2   3.5   4.1e-07   0.00025       7      84 ..      49     135 ..      44     155 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 21.2 bits;  conditional E-value: 4.1e-07
+                              .ETT-S-SEE-GGGS.S-SSHH.HHHHHHHHHHGGGG-..HHH..TTSTTHHHHHHS---....SS-EEEE---HHHHHHHHTT-G CS
+                       Fz   7 lCknigynstslpnllghetee.evaeeleefsllvkl..sCs..palklflCsllfpkC....gekekplppCrslCeavrdsCe 83 
+                              lC+n  +n+  + ++++++++  + ++  ++f++l+ l  +C   + +++ +C ++fp+C    +  + p+++C+s+C+++  +C 
+  DDB0231833|DDB_G0274287  49 LCNNKLINKQLIYSTINKSNQIqSLKMVEQSFKQLTFLqgKCLnlNFAQFGICDIYFPSCvetsFGISLPKRLCKSVCKQIVTDCP 134
+                              6777655555444444444444133444555555555533695224477779********987733457889*************8 PP
+
+                              G CS
+                       Fz  84 k 84 
+                               
+  DDB0231833|DDB_G0274287 135 T 135
+                              7 PP
+
+>> DDB0307929|DDB_G0287449  |Protein|gene: DDB_G0287449 on chromosome: 5 position 189973 to 191154
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.5   4.8   1.6e-07   9.9e-05       8      86 ..      60     146 ..      48     168 .. 0.68
+   2 ?   -1.3   0.0       4.2   2.6e+03      27      38 ..     204     215 ..     179     253 .. 0.52
+   3 ?    0.7   0.3      0.95   5.9e+02       6      42 ..     242     288 ..     237     299 .. 0.44
+
+  Alignments for each domain:
+  == domain 1  score: 22.5 bits;  conditional E-value: 1.6e-07
+                              ETT-.S-SEE-GGGS.S-SSHHHHHHHHHHHHGGGG-..HH.HTTSTTHHHHHHS---.......SS-EEEE---HHHHHHHHTT- CS
+                       Fz   8 Ckni.gynstslpnllgheteeevaeeleefsllvkl..sC.spalklflCsllfpkC.......gekekplppCrslCeavrdsC 82 
+                              C+ + +y++ ++  ++++++  e+   ++ + +l+++  +C +p + + lCs+lfp+C            p++ C++ C +  + C
+  DDB0307929|DDB_G0287449  60 CSIYlPYKRIYISDTFNQTKSLEM---ADRLFPLIQSmsRCnQPSVFKTLCSYLFPECqlytnnkVVVAVPVLTCYEECTQSVSLC 142
+                              777778999999998877777755...444444444434594477*************9986544223345588*******99999 PP
+
+                              GGGS CS
+                       Fz  83 ekvl 86 
+                              + + 
+  DDB0307929|DDB_G0287449 143 NGKG 146
+                              8743 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 4.2
+                              HHHHHHHHHHHH CS
+                       Fz  27 eeevaeeleefs 38 
+                              +++ +++ ++++
+  DDB0307929|DDB_G0287449 204 NNNSSSNSDNVT 215
+                              222333333332 PP
+
+  == domain 3  score: 0.7 bits;  conditional E-value: 0.95
+                              ..ETT-S.........-SEE-GGGS.S-SSHHHH.HHHHHHHHGGGG CS
+                       Fz   6 elCknig.........ynstslpnllgheteeev.aeeleefsllvk 42 
+                              +lC +++         yn  +  + l++ +e++  +++ ++ +++++
+  DDB0307929|DDB_G0287449 242 TLCITVPiiliialiwYNFKRRATKLKKLQEQQYqQQQQQQQQQYLT 288
+                              56666555566666655555333333333333231222233233333 PP
+
+>> DDB0232047|DDB_G0284585  |Protein|gene: fslL on chromosome: 4 position 2184288 to 2186464
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.3   7.3   7.6e-07   0.00047       1      86 [.      36     140 ..      36     159 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 20.3 bits;  conditional E-value: 7.6e-07
+                              -EE-........ETT-.S.-SEE-GGGS.S-SSHHHHHHHHHHH.HGGGG-...HHHTT..STTHHHHHHS---.........SS- CS
+                       Fz   1 Cepi.....lelCkni.g.ynstslpnllgheteeevaeeleef.sllvkl...sCspa..lklflCsllfpkC.........gek 64 
+                              Cep+     ++ C+++ + +ns ++    +++t+++  ++l+++  ll+ +   +C+      + lCs+++ +C         ++ 
+  DDB0232047|DDB_G0284585  36 CEPYigdsqITKCSTFlPnINSIYVS---ANSTQKDSMKTLDNYfGLLLAVgseKCKDSslTYQTLCSMYLKECesftdnstlKTV 118
+                              77776665677799876524766533...345666667788888766666655559755347899************998877556 PP
+
+                              EEEE---HHHHHHHHTT-GGGS CS
+                       Fz  65 ekplppCrslCeavrdsCekvl 86 
+                              + p+++Cr+ C++v++ C+ + 
+  DDB0232047|DDB_G0284585 119 SIPKRICRKTCNDVTKLCNIES 140
+                              678899************8754 PP
+
+>> DDB0349756|DDB_G0274033  |Protein|gene: fslM-2 on chromosome: 2 position 3690459 to 3692641
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.1   2.4   9.2e-07   0.00057       8      83 ..      42     131 ..      30     154 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 20.1 bits;  conditional E-value: 9.2e-07
+                              ETT-.S-SEE-GGGS.S-SSHHHHHHHHHHH....HGGGG-HHHTT..STTHHHHHHS---.........SS-EEEE---HHHHHH CS
+                       Fz   8 Ckni.gynstslpnllgheteeevaeeleef....sllvklsCspa..lklflCsllfpkC.........gekekplppCrslCea 77 
+                              C+++ +  +     + ++ t++++ ++l+e+     ++ +++C+++    + lCs+++p C          +   p+++C++ C++
+  DDB0349756|DDB_G0274033  42 CSKFlN--NLDSIYVSSNATQQNAMKKLDEYfgilGAIGTSGCKSDslTYKTLCSIYLPGCesftnnqtnITIAIPKRICYNTCNN 125
+                              444422..2222223445677778889999965433344446*877557789***********9876554223346699******* PP
+
+                              HHTT-G CS
+                       Fz  78 vrdsCe 83 
+                              v+ +C 
+  DDB0349756|DDB_G0274033 126 VTTKCG 131
+                              *****5 PP
+
+>> DDB0349757|DDB_G0273035  |Protein|gene: fslM-1 on chromosome: 2 position 2339145 to 2341327
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.1   2.4   9.2e-07   0.00057       8      83 ..      42     131 ..      30     154 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 20.1 bits;  conditional E-value: 9.2e-07
+                              ETT-.S-SEE-GGGS.S-SSHHHHHHHHHHH....HGGGG-HHHTT..STTHHHHHHS---.........SS-EEEE---HHHHHH CS
+                       Fz   8 Ckni.gynstslpnllgheteeevaeeleef....sllvklsCspa..lklflCsllfpkC.........gekekplppCrslCea 77 
+                              C+++ +  +     + ++ t++++ ++l+e+     ++ +++C+++    + lCs+++p C          +   p+++C++ C++
+  DDB0349757|DDB_G0273035  42 CSKFlN--NLDSIYVSSNATQQNAMKKLDEYfgilGAIGTSGCKSDslTYKTLCSIYLPGCesftnnqtnITIAIPKRICYNTCNN 125
+                              444422..2222223445677778889999965433344446*877557789***********9876554223346699******* PP
+
+                              HHTT-G CS
+                       Fz  78 vrdsCe 83 
+                              v+ +C 
+  DDB0349757|DDB_G0273035 126 VTTKCG 131
+                              *****5 PP
+
+>> DDB0231861|DDB_G0284729  |Protein|gene: fslK on chromosome: 4 position 2327899 to 2330183
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.9   4.1   5.1e-07   0.00031      16      86 ..      50     125 ..      27     169 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 20.9 bits;  conditional E-value: 5.1e-07
+                              E-GGGS.S-SSHHHHHHHHHHH.HGGGG-..HHHTT.STTHHHHHHS---.........SS-EEEE---HHHHHHHHTT-GGGS CS
+                       Fz  16 tslpnllgheteeevaeeleef.sllvkl..sCspa.lklflCsllfpkC.........gekekplppCrslCeavrdsCekvl 86 
+                              t         +++++  +l+ + sll  +  sC++a   + lCs ++p+C         +e   p+++C + C++v+++C+   
+  DDB0231861|DDB_G0284729  50 T--------ANQSTAMLSLNLYfSLLGGSsaSCQNAyTFATLCSTYLPECeifidnstnKEIAMPKRVCLDTCNSVSKNCQITS 125
+                              2........23444455666665555555446*88735678*************9986655556789*************8744 PP
+
+>> DDB0231832|DDB_G0284761  |Protein|gene: fslA on chromosome: 4 position 2445394 to 2447839
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.8   3.8   2.3e-06    0.0014       1      84 [.      32     130 ..      32     153 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 18.8 bits;  conditional E-value: 2.3e-06
+                              -EE-.....ETT-S-SEE-GGGS.S-SSHHHHHHHHHHHHGGGG-...HHH.TTSTTHHHHHHS---.........SS-EEEE--- CS
+                       Fz   1 Cepi..lelCknigynstslpnllgheteeevaeeleefsllvkl...sCs.palklflCsllfpkC.........gekekplppC 71 
+                              C++    ++C  + +n+ s+  + + +t+e+++ e++ +  ++++   +C+ p    ++C+ +f+ C         ++   pl+pC
+  DDB0231832|DDB_G0284761  32 CQKKtiTSICDPYLFNTDSIYIFNSTTTQESIELEIKRLLGFFSMlpsTCQvPSTYRLICNQYFQTCvpisktdnsSTIAIPLRPC 117
+                              555556889999888877777777778888999999999666666564597689****************98765433345669** PP
+
+                              HHHHHHHHTT-GG CS
+                       Fz  72 rslCeavrdsCek 84 
+                              r+ C   +  C  
+  DDB0231832|DDB_G0284761 118 RESCDYGNGICGT 130
+                              ****998888876 PP
+
+>> DDB0231312|DDB_G0288269  |Protein|gene: fslE on chromosome: 5 position 1290029 to 1292253
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.1   1.0   3.9e-06    0.0024       7      85 ..      52     152 ..      46     167 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 18.1 bits;  conditional E-value: 3.9e-06
+                              .ETT-S.......-.SEE-GGGS.S-SSHH.HHHHHHHHHHGGGG-..HHHTT..STTHHHHHHS---..........SS-EEEE- CS
+                       Fz   7 lCknig.......y.nstslpnllghetee.evaeeleefsllvkl..sCspa..lklflCsllfpkC..........gekekplp 69 
+                              lC+n         y + t + n  + +++e +  e l++f++l+ l  +C      ++ lC l f +C          ++ + p++
+  DDB0231312|DDB_G0288269  52 LCNNRLfnggkkiYsTVTLVDN-KNISSQElSKIEILKSFEALTFLqdQCDDLlfTQFGLCDLNFSPCvetipkitplQNVSLPQR 136
+                              5665321244554523333333.33333331334456666666666446*876424556**************9998766677889 PP
+
+                              --HHHHHHHHTT-GGG CS
+                       Fz  70 pCrslCeavrdsCekv 85 
+                              +C+s+Ce++ ++C + 
+  DDB0231312|DDB_G0288269 137 LCKSVCERMVSNCPRL 152
+                              *************874 PP
+
+>> DDB0232055|DDB_G0286609  |Protein|gene: fslQ on chromosome: 4 position 4699815 to 4701833
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.4   4.6   6.2e-06    0.0038      29     100 ..      60     142 ..      31     149 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 17.4 bits;  conditional E-value: 6.2e-06
+                              HHHHHHHHH...HGGGG-HHHTTSTTHHHHHHS---............SS-EEEE---HHHHHHHHTT-GGGSTT....SHHHH-- CS
+                       Fz  29 evaeeleef...sllvklsCspalklflCsllfpkC............gekekplppCrslCeavrdsCekvlaeagkewpeelnC 99 
+                              + +++++++     +++ +C+p++  ++C   +pkC               + p +pC s+C +++  C+  + +    + + l+C
+  DDB0232055|DDB_G0286609  60 QLNKNVSDIirmLEFTTPECKPNAINIMCLKSYPKCetynetlsnntnIIFNLPSLPCNSICLKAETPCKIFIDN----FIKDLSC 141
+                              2244444443213333447*******************999986554422234559*************998844....4445566 PP
+
+                              - CS
+                       Fz 100 e 100
+                              +
+  DDB0232055|DDB_G0286609 142 N 142
+                              6 PP
+
+>> DDB0232054|DDB_G0286607  |Protein|gene: fslP on chromosome: 4 position 4697072 to 4699136
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.2   3.7   7.1e-06    0.0044      31     100 ..      59     139 ..      29     146 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 17.2 bits;  conditional E-value: 7.1e-06
+                              HHHHHHH...HGGGG-HHHTTSTTHHHHHHS---............SS-EEEE---HHHHHHHHTT-GGGSTT....SHHHH--- CS
+                       Fz  31 aeeleef...sllvklsCspalklflCsllfpkC............gekekplppCrslCeavrdsCekvlaeagkewpeelnCe 100
+                              +++++++     +++ +C+p++  ++C   +pkC               + p +pC s+C  ++  C+  +     ++ + l+C+
+  DDB0232054|DDB_G0286607  59 NKNVSDIirmLEFTTPECKPNAINLICLKSYPKCethnetlsnntnIIFNLPSLPCNSICLIAETPCKIFID----NFLKDLSCS 139
+                              34444443213334447******************9999986554422234559*************99884....345567776 PP
+
+>> DDB0231316|DDB_G0288261  |Protein|gene: fslG on chromosome: 5 position 1308843 to 1310648
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.6   1.5   5.5e-06    0.0034       5      84 ..      45     140 ..      40     158 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 17.6 bits;  conditional E-value: 5.5e-06
+                              ...ETT-.S......-SEE-GGGS.S-SSHH..HHHHHHHHHHGGGG-HHHTT..STTHHHHHHS---........SS-EEEE--- CS
+                       Fz   5 lelCkni.g......ynstslpnllghetee..evaeeleefsllvklsCspa..lklflCsllfpkC........gekekplppC 71 
+                               +lCkn  +      y+  ++ n l+++t +  ++a++ e+  ++++++C+    ++  +C++++ +C        ++ + p+++C
+  DDB0231316|DDB_G0288261  45 QPLCKNKlSnngefiYS--TIGNSLNSQTLSqqTIAKSFEA-LTFIQNQCQDLlfAEYGICNIYLSPCiittvaplKNISLPQRLC 127
+                              57788854445554333..2344444443331022333333.5677778*876436777************999886667889*** PP
+
+                              HHHHHHHHTT-GG CS
+                       Fz  72 rslCeavrdsCek 84 
+                               s C+++  +C +
+  DDB0231316|DDB_G0288261 128 NSACQRMVTNCPR 140
+                              ***********87 PP
+
+>> DDB0231315|DDB_G0288253  |Protein|gene: fslF on chromosome: 5 position 1292298 to 1294154
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.4   2.7   1.3e-05    0.0077       4     100 ..      43     144 ..      41     154 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 16.4 bits;  conditional E-value: 1.3e-05
+                              -....ETT-.S......-SEE-GGGS.S-SSHHHHHHHHHHHHGGGG-HHHTT..STTHHHHHHS---........SS-EEEE--- CS
+                       Fz   4 i.lelCkni.g......ynstslpnllgheteeevaeeleefsllvklsCspa..lklflCsllfpkC........gekekplppC 71 
+                              i  +lC++  +      y    +++  + +++++++++ e+++ l + +C+    +++ +C +++ +C        ++ + p++ C
+  DDB0231315|DDB_G0288253  43 IdQQLCNSKlQnngdriY----TTTNSQIDSQTNIKKSFEAITFLQD-QCKDLlfAQFGICDIYLAPCievtltplKSISLPQRFC 123
+                              555677764342222222....2333445666666666666655544.7*9764366679***********99988666678899* PP
+
+                              HHHHHHHHTT-GGGSTT....SHHHH--- CS
+                       Fz  72 rslCeavrdsCekvlaeagkewpeelnCe 100
+                              +s+C ++ ++C +        + e+++C+
+  DDB0231315|DDB_G0288253 124 KSVCDRMVSNCPR--------LEEQMDCS 144
+                              ***********98........33444554 PP
+
+>> DDB0238139|DDB_G0281067  |Protein|gene: DDB_G0281067 on chromosome: 3 position 4002363 to 4003396
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.1       6.1   3.8e+03      74     101 ..     122     146 ..     112     162 .. 0.61
+   2 !   16.1   0.7   1.5e-05    0.0094      26      85 ..     200     263 ..     144     278 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 6.1
+                              HHHHHHTT-GGGSTT....SHHHH---S CS
+                       Fz  74 lCeavrdsCekvlaeagkewpeelnCek 101
+                               C  ++  C  +  ++++ w    +C++
+  DDB0238139|DDB_G0281067 122 TCTGTNGICTLQAYTESSGWY---SCSA 146
+                              566666666665555555555...4543 PP
+
+  == domain 2  score: 16.1 bits;  conditional E-value: 1.5e-05
+                              SHHHHHHHHHHHHGGGG-..HHHTTSTTHHHHHHS---..SS-EEEE.---HHHHHHHHTT-GGG CS
+                       Fz  26 teeevaeeleefsllvkl..sCspalklflCsllfpkC..gekekpl.ppCrslCeavrdsCekv 85 
+                              t+   ++++ +  ++ ++  +C + ++++lC + fp    + ++kp+ ++ ++ Ce++ + C  v
+  DDB0238139|DDB_G0281067 200 TQGVFKNNMANPLVIGQNssQCGNLYEKVLCDVSFPLApgS-DGKPIyQVTQKQCEDFIEVCDVV 263
+                              333233333333333333446*****************954.555554**********9999765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (107 nodes)
+Target sequences:                        12320  (6916748 residues searched)
+Passed MSV filter:                      1395  (0.113231); expected 246.4 (0.02)
+Passed bias filter:                      323  (0.0262175); expected 246.4 (0.02)
+Passed Vit filter:                        42  (0.00340909); expected 12.3 (0.001)
+Passed Fwd filter:                        20  (0.00162338); expected 0.1 (1e-05)
+Initial search space (Z):              12320  [actual number of targets]
+Domain search space  (domZ):              20  [number of targets reported over threshold]
+# CPU time: 0.31u 0.03s 00:00:00.34 Elapsed: 00:00:00.13
+# Mc/sec: 5693.02
+//
+[ok]
