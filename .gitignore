@@ -70,3 +70,4 @@ venv/*
 xml-files/*
 >>>>>>> 029c91d89f91678106dc1bbfa7c0c2282ce7fb08
 *.swp
+hmmer-outfiles/*
