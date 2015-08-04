@@ -1,5 +1,5 @@
-misc_scripts
+scripts-biopython
 ============
 
-Folder Bio-python contains scripts that use this modules to do various tasks
+this repo has scripts that use Bio-python to perform tasks
 
