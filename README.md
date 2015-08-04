@@ -1,4 +1,4 @@
 ============
 
-this folder contains scripts that use this modules to do various tasks
+this folder contains scripts that use Bio module to do various tasks
 
