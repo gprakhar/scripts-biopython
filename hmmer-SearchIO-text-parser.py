@@ -13,18 +13,8 @@ import os, glob
 #inputfileName = str(args.HMMOutputFilename)
 
 filenames = [os.path.basename(x) for x in glob.glob('*.out')]
-flag_once = 0
 
 for filename in filenames:
-	'''protName_new = filename[8:14]
-	if flag_once == 0:
-		pass
-	else:
-		if protName != protName_new:
-			print '---XXXX---' * 10
-	flag_once = flag_once + 1
-	protName = filename[8:14]'''
-	print '\nProtien Name = %s' % filename[8:14]
 	qresults = SearchIO.parse(filename,'hmmer3-text')
 	for qresult in qresults:
 		print 'Query Name = %s' % (qresult.id)
@@ -33,22 +23,10 @@ for filename in filenames:
 		flag = 0
 		for hit in qresult:
 			flag = flag + 1
-			if flag > 5:
-				print '.'
-				print '.'
-				print '.'
-				break
-			else:
-				print '\n%d.Name of Hit =  %s' % (flag, hit.id)
-				print 'number of HSP = %d' % (len(hit))
-				print 'Discription of Query %s' % hit.description
-				flag2 = 0
+			print '\n%d.Name of Hit =  %s' % (flag, hit.id)
+			print 'number of HSP = %d' % (len(hit))
+			print 'Discription of Query %s' % hit.description
 			for hsp in hit:
-				flag2 = flag2 +1
-				if flag2 > 3:
-					print '.'
-	               	                break
-				else:
-					print 'HSP bitscore : %s' % (str(hsp.bitscore))
-					print 'evalue of HSP : %s' % (str(hsp.evalue))
+				print 'HSP bitscore : %s' % (str(hsp.bitscore))
+				print 'evalue of HSP : %s' % (str(hsp.evalue))
 		print '##' * 10

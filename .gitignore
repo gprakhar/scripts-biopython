@@ -62,7 +62,7 @@ target/
 venv/*
 *.fa
 *.aln
-*.txt
+
 *.pyc
 *.xml
 *.afa
