@@ -15,6 +15,9 @@ import os, glob
 filenames = [os.path.basename(x) for x in glob.glob('*.OUT')]
 flag_once = 0
 
+hitDictionery = dict()
+hitList = list()
+
 for filename in filenames:
 	print '\nProtien Name = %s' % filename[:-4]
 	qresults = SearchIO.parse(filename,'hmmer3-text')
@@ -25,23 +28,18 @@ for filename in filenames:
 		flag = 0
 		for hit in qresult:
 			flag = flag + 1
-			if flag > 5:
-				print '\t\t..'
-				print '\t\t..'
-				break
-			else:
-				print '\n\t\t%d.Name of Hit =  %s' % (flag, hit.id)
-				print '\t\tDescription of Hit = %s' % (hit.description)
-				print '\t\tnumber of HSP = %d' % (len(hit))
-				flag2 = 0
+			print '\n\t\t%d.Name of Hit =  %s' % (flag, hit.id)
+			hitList.append(hit.id)
+			print '\t\tDescription of Hit = %s' % (hit.description)
+			print '\t\tnumber of HSP = %d' % (len(hit))
 			for hsp in hit:
-				flag2 = flag2 +1
-				if flag2 > 3:
-					print '\t\t\t...'
-	               	                break
-				else:
-					print '\t\t\tHSP bitscore : %s' % (str(hsp.bitscore))
-					print '\t\t\tevalue of HSP : %s' % (str(hsp.evalue))
+				print '\t\t\tHSP bitscore : %s' % (str(hsp.bitscore))
+				print '\t\t\tevalue of HSP : %s' % (str(hsp.evalue))
+		hitDictionery[qresult.id] = hitList
+		hitList = list()
+	print 'Dicty Proteins with all domains from the Human protien %s = %s' % (filename[:-4], reduce(lambda x,y: x&y, map(set, hitDictionery.values())) )
 	print '##' * 10
+	hitDictionery = dict()
+
 
 
