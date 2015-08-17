@@ -1,4 +1,4 @@
-#Script to parse Plain text output from HMMER 3.1b2
+#Script to parse Plain text output from HMMER 3.1b2, using the Biopython SerachIO library
 #Date: 28 Jul 2015 IST
 #Author: Prakhar Gaur
 
@@ -12,21 +12,30 @@ import os, glob
 #args = parser.parse_args()
 #inputfileName = str(args.HMMOutputFilename)
 
-filenames = [os.path.basename(x) for x in glob.glob('*.out')]
+filenames = [os.path.basename(x) for x in glob.glob('*.OUT')]
+
+hitDictionery = dict()
+hitList = list()
 
 for filename in filenames:
+	print '\nProtien Name = %s' % filename[:-4]
 	qresults = SearchIO.parse(filename,'hmmer3-text')
 	for qresult in qresults:
-		print 'Query Name = %s' % (qresult.id)
-		print 'Query Details = %s' % (qresult.description)
-		print '\n\nNumber of Hits = %d' % len(qresult)
+		print '\n\tDomain Query Name = %s' % (qresult.id)
+		print '\tDomain Details = %s' % (qresult.description)
+		print '\tNumber of Hits = %d' % len(qresult)
 		flag = 0
 		for hit in qresult:
 			flag = flag + 1
-			print '\n%d.Name of Hit =  %s' % (flag, hit.id)
-			print 'number of HSP = %d' % (len(hit))
-			print 'Discription of Query %s' % hit.description
+			print '\n\t\t%d.Name of Hit =  %s' % (flag, hit.id)
+			hitList.append(hit.id)
+			print '\t\tDescription of Hit = %s' % (hit.description)
+			print '\t\tnumber of HSP = %d' % (len(hit))
 			for hsp in hit:
-				print 'HSP bitscore : %s' % (str(hsp.bitscore))
-				print 'evalue of HSP : %s' % (str(hsp.evalue))
-		print '##' * 10
+				print '\t\t\tHSP bitscore : %s' % (str(hsp.bitscore))
+				print '\t\t\tevalue of HSP : %s' % (str(hsp.evalue))
+		hitDictionery[qresult.id] = hitList
+		hitList = list()
+	print 'Dicty Proteins with all domains from the Human protien %s = %s' % (filename[:-4], reduce(lambda x,y: x&y, map(set, hitDictionery.values())) )
+	print '##' * 10
+	hitDictionery = dict()

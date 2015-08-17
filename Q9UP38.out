@@ -3,9 +3,9 @@
 # Copyright (C) 2015 Howard Hughes Medical Institute.
 # Freely distributed under the GNU General Public License (GPLv3).
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# query HMM file:                  /home/interns/CHG_Nunjundiah-Project/raw-data/DPM-prot-HMM/PF01534.hmm
-# target sequence database:        dicty_primary_protein.fa
-# number of worker threads:        20
+# query HMM file:                  Q9UP38.HMM
+# target sequence database:        ../dicty_primary_protein.fa
+# number of worker threads:        12
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Query:       Frizzled  [M=317]
@@ -279,20 +279,9 @@ Passed Vit filter:                        35  (0.00284091); expected 12.3 (0.001
 Passed Fwd filter:                        10  (0.000811688); expected 0.1 (1e-05)
 Initial search space (Z):              12320  [actual number of targets]
 Domain search space  (domZ):              10  [number of targets reported over threshold]
-# CPU time: 0.37u 0.02s 00:00:00.39 Elapsed: 00:00:00.10
-# Mc/sec: 21926.09
+# CPU time: 0.34u 0.02s 00:00:00.36 Elapsed: 00:00:00.07
+# Mc/sec: 31322.99
 //
-[ok]
-# hmmsearch :: search profile(s) against a sequence database
-# HMMER 3.1b2 (February 2015); http://hmmer.org/
-# Copyright (C) 2015 Howard Hughes Medical Institute.
-# Freely distributed under the GNU General Public License (GPLv3).
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# query HMM file:                  /home/interns/CHG_Nunjundiah-Project/raw-data/DPM-prot-HMM/PF01392.hmm
-# target sequence database:        dicty_primary_protein.fa
-# number of worker threads:        20
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 Query:       Fz  [M=107]
 Accession:   PF01392.18
 Description: Fz domain
@@ -709,7 +698,7 @@ Passed Vit filter:                        42  (0.00340909); expected 12.3 (0.001
 Passed Fwd filter:                        20  (0.00162338); expected 0.1 (1e-05)
 Initial search space (Z):              12320  [actual number of targets]
 Domain search space  (domZ):              20  [number of targets reported over threshold]
-# CPU time: 0.31u 0.03s 00:00:00.34 Elapsed: 00:00:00.13
-# Mc/sec: 5693.02
+# CPU time: 0.21u 0.01s 00:00:00.22 Elapsed: 00:00:00.06
+# Mc/sec: 12334.87
 //
 [ok]
