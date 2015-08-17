@@ -64,7 +64,6 @@ venv/*
 *.aln
 
 *.pyc
-*.xml
 *.afa
 *.tar
 xml-files/*
