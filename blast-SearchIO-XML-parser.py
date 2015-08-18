@@ -40,4 +40,5 @@ for filename in filenames:
 				else:
 					print '\t\t\tHSP bitscore : %s' % (str(hsp.bitscore))
 					print '\t\t\tevalue of HSP : %s' % (str(hsp.evalue))
+					print '\t\t\tHSP Alignment Span : %s\n' % (str(hsp.aln_span))	
 		print '##' * 10
